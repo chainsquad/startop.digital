@@ -1,0 +1,34 @@
+<div class='landing-section landing-section--inverse landing-section--orange'>
+  <svg viewbox='0 0 502.70832 13.229167' xmlns='http://www.w3.org/2000/svg'>
+    <path d= 'M0 0s167.309 6.615 251.354 6.615C335.4 6.615 502.708 0 502.708 0v13.23H0z'></path></svg>
+  <svg viewbox='0 0 502.70832 13.229167' xmlns='http://www.w3.org/2000/svg'>
+    <path d='M0 0s167.309 6.615 251.354 6.615C335.4 6.615 502.708 0 502.708 0v13.23H0z'></path></svg>
+  <div class='landing-section__content'>
+    <h3><i class="fa fa-flag"></i> Überwachung und Benachrichtigungen</h3>
+    <hr>
+    <p>Kundenspezifisches <b>Überwachung</b> der gesamten Infrastruktur und <b>Benachrichtigung</b>. Ideal in combination mit <strong>#self-hosted</strong> <i class="fa fa-comment-o"></i> Chat-System.</p>
+    <p>Hochgradig Anpassbar auf Ihre W&uuml;nsche, von <code>spam-me-baby</code> bis <code>dont-bother-me</code>.
+    <p>Zugriff auf <code>#telemetrie</code>, <code>#metriken</code> und <code>#logs</code> und <code>#dashboards</code>.
+    <p>Im Einsatz: <code>prometheus</code>, <code>alertmanager</code> und <code>grafana</code></p>
+    <hr>
+  </div>
+  <pre class='landing-snippet'><code class='yaml'>---
+global:
+  resolve_timeout: "3m"
+route:
+  receiver: "chatsystem"
+  group_by: ['alertname', 'env', 'service']
+  routes:
+    - receiver: "slack"
+      group_wait: 10s
+      matchers:
+        - env = prod
+      continue: true
+receivers:
+  - name: chatsystem
+    webhook_configs:
+      - send_resolved: true
+        api_url: "https://chat.you.biz/hooks"
+        channel: '#alerts'
+</code></pre>
+</div>

@@ -1,0 +1,49 @@
+---
+---
+
+$primary: #02b046;
+$link: #29C;
+$secondary: #ff5c21;
+$tertiary: #6761a8;
+
+@import 'nav';
+
+@import 'landing';
+@import 'landing_section';
+@import 'landing_snippet';
+@import 'landing_hero';
+@import 'landing_cta';
+
+@import 'footer';
+
+@import 'btn_group';
+@import 'btn';
+
+* {
+  box-sizing: border-box;
+  min-height: 0;
+  min-width: 0;
+}
+
+html {
+  scrollbar-color: #999 #DDD;
+}
+
+body {
+  font-family: Open Sans;
+  flex-direction: column;
+  overflow-y: scroll;
+  background: #FFF;
+  min-height: 100vh;
+  display: flex;
+  color: #444;
+  margin: 0;
+}
+
+.landing {
+  background: image-url('assets/images/dot-grid.png');
+}
+
+svg {
+  max-width: 100%;
+}

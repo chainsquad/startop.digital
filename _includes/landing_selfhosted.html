@@ -1,0 +1,22 @@
+<div class='landing-section'>
+  <div class='landing-section__content'>
+    <h3>Wir lieben <code>#self-hosted</code></h3>
+    <hr>
+    <p>Es gibt ein <code>#docker</code> image? Wir liefern <b>IP-Adresse</b> und <b>Port</b> -
+    nat&uuml;rlich mit sicherer <code>#ssl</code> Verschl&uuml;sselung.
+    <hr>
+  </div>
+  <pre class='landing-snippet'><code class='yaml'>version: 3
+services:
+  database:
+    image: postgres
+  app:
+    build: app/
+    ports:
+      - 8080:8080
+  loadbalancer:
+    image: nginx
+      - 80:80
+      - 443:443
+</code></pre>
+</div>
