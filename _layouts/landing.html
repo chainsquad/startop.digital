@@ -2,27 +2,7 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
  {% include head.html %}
  <body>
- <!---
-  <div class='mobile-menu'>
-    <div class='mobile-menu__close'>
-      <svg width="24" class="octicon octicon-x" viewbox="0 0 12 16" version="1.1" height="32" aria-hidden="true"> <path fill-rule="evenodd" d= "M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"> </path></svg>
-    </div>
-    <a class="mobile-menu__item" target="_blank" active="exact" href="https://">
-      <svg class= "octicon octicon-terminal" viewbox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d= "M7 10h4v1H7v-1zm-3 1l3-3-3-3-.75.75L5.5 8l-2.25 2.25L4 11zm10-8v10c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h12c.55 0 1 .45 1 1zm-1 0H1v10h12V3z">
-    </path></svg> <span>Try</span></a>
-  </div>
-  //-->
-  <div class='nav'>
-    <div class='nav__wrapper'>
-      <a class="nav__brand" href="/">StartOps</a>
-      <!---
-      <div class='nav__mobile-menu-toggle'>
-        <span>Menu</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"> <path d= "M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"></path></svg>
-      </div>
-      //-->
-    </div>
-  </div>
+  {% include nav.html %}
   <article>
    {% include landing_hero.html %}
    {% include landing_apps.html %}
